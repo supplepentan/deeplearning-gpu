@@ -1,7 +1,7 @@
 // For format details, see https://aka.ms/devcontainer.json. For config options, see the README at:
 // https://github.com/microsoft/vscode-dev-containers/tree/v0.205.2/containers/python-3
 {
-    "name": "Ubuntu",
+    "name": "nvidia/cuda:11.3.0-cudnn8-devel-ubuntu20.04",
     "build": {
         "dockerfile": "Dockerfile",
         // Update 'VARIANT' to pick an Ubuntu version: focal, bionic
@@ -38,8 +38,11 @@
     // Use 'forwardPorts' to make a list of ports inside the container available locally.
     // "forwardPorts": [],
     // Use 'postCreateCommand' to run commands after the container is created.
-    "postCreateCommand": "pip3 install -r requirements.txt torch==1.10.1+cu113 torchvision==0.11.2+cu113 torchaudio==0.10.1+cu113 -f https://download.pytorch.org/whl/cu113/torch_stable.html",
-    "runArgs": ["--gpus", "all"]
+    "postCreateCommand": "alias python='python3'; pip install -r requirements.txt; pip install torch==1.10.1+cu113 torchvision==0.11.2+cu113 torchaudio==0.10.1+cu113 -f https://download.pytorch.org/whl/cu113/torch_stable.html",
+    "runArgs": [
+        "--gpus",
+        "all"
+    ]
     // Comment out connect as root instead. More info: https://aka.ms/vscode-remote/containers/non-root.
     // "remoteUser": "vscode"
 }
