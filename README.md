@@ -1,11 +1,12 @@
 # deeplearning-gpu
 
 # Git
+```
 apt-get install git
+```
 
 # Python
 ```
-update-alternatives --config python
 update-alternatives --install /usr/bin/python python /lib/python3.8 1
 update-alternatives --install /usr/bin/python python /lib/python3.9 2
 update-alternatives --config python
@@ -13,7 +14,6 @@ ln -s /usr/bin/python3.8 /usr/bin/python
 export PATH="$PATH:/usr/bin/python"
 alias python="python3"
 ```
-rm -rf /lib/python
 # Cython
 ```
 ln -s /usr/bin/python3.8 /usr/bin/python
@@ -63,7 +63,6 @@ apt -y install swig
 
 # C/C++ コンパイラー，make，パッケージツール，その他のインストール
 ```
-apt -y update
 apt -y install build-essential gcc g++ make libtool texinfo dpkg-dev pkg-config
 apt -y install libgmp10 libgmp3-dev libmpfr-dev libmpc-dev libppl-dev wget
 ```
