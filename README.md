@@ -1,4 +1,17 @@
 # deeplearning-gpu
+# package
+
+参考サイト:https://www.debian.org/distrib/packages
+
+python3-dev
+
+python3-pip
+
+libgl1-mesa-dev
+関連エラー：OpenCV - ImportError: libGL.so.1: cannot open shared object file: No such file or directory
+
+libglib2.0-0
+関連エラー：OpenCV - ImportError: libgthread-2.0.so.0: cannot open shared object file: No such file or directory
 
 # Git
 ```
@@ -51,6 +64,7 @@ apt install zip unzip
 ```
 
 # OpenCV
+libgl1-mesa-dev、libglib2.0-0がインストルーされていないとエラーが出ることがある。
 ```
 pip install opencv-python
 pip install opencv-contrib-python
